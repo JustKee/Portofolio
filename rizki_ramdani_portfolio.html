@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizki Ramdani — Software Engineer | Data Analyst | Cyber Security</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        lightbg: '#F5F5F5',
+                        navy: {
+                            DEFAULT: '#2C3E50',
+                            dark: '#1E2B37',
+                            light: '#3A536B',
+                            accent: '#203040'
+                        },
+                        brandRed: {
+                            DEFAULT: '#E74C3C',
+                            hover: '#C0392B',
+                            light: '#FDEDEC',
+                            glow: 'rgba(231, 76, 60, 0.35)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F5;
+            color: #2C3E50;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(44, 62, 80, 0.08);
+        }
+        .nav-link {
+            transition: all 0.2s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #E74C3C;
+        }
+        .portrait-frame {
+            position: relative;
+            background: linear-gradient(135deg, #E74C3C 0%, #2C3E50 100%);
+            padding: 4px;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 35px -10px rgba(231, 76, 60, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-lightbg text-navy antialiased selection:bg-brandRed selection:text-white flex flex-col min-h-screen">
+
+    <!-- NAVIGATION BAR -->
+    <header class="sticky top-0 z-50 glass-card border-b border-gray-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand Logo / Name -->
+                <a href="#hero" class="flex items-center gap-2 group">
+                    <div class="w-9 h-9 rounded-lg bg-navy text-white flex items-center justify-center font-bold text-lg group-hover:bg-brandRed transition-colors shadow-md">
+                        RR
+                    </div>
+                    <span class="font-extrabold text-lg text-navy tracking-tight group-hover:text-brandRed transition-colors">
+                        Rizki Ramdani<span class="text-brandRed">.</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-navy/80">
+                    <a href="#about" class="nav-link">About Me</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contact" class="px-4 py-2 rounded-lg bg-brandRed text-white hover:bg-brandRed-hover font-semibold transition-all shadow-sm hover:shadow-md">
+                        Get In Touch
+                    </a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" type="button" class="md:hidden p-2 rounded-md text-navy hover:text-brandRed focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3 shadow-lg">
+            <a href="#about" class="block py-2 text-navy font-medium hover:text-brandRed mobile-link">About Me</a>
+            <a href="#experience" class="block py-2 text-navy font-medium hover:text-brandRed mobile-link">Experience</a>
+            <a href="#projects" class="block py-2 text-navy font-medium hover:text-brandRed mobile-link">Projects</a>
+            <a href="#skills" class="block py-2 text-navy font-medium hover:text-brandRed mobile-link">Skills</a>
+            <a href="#contact" class="block w-full text-center py-2.5 mt-2 rounded-lg bg-brandRed text-white font-semibold hover:bg-brandRed-hover mobile-link">
+                Get In Touch
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-lightbg">
+        <!-- Accent Glow Spheres -->
+        <div class="absolute -top-12 -right-12 w-80 h-80 bg-brandRed/15 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute top-1/2 -left-20 w-80 h-80 bg-navy/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Column Text & CTAs -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <!-- Availability Pill -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold shadow-xs">
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Fresh Graduate | Open to Data Analyst & Software Engineering Roles
+                    </div>
+
+                    <!-- Primary Headline -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-navy leading-tight">
+                        Transforming Complex Data into <span class="text-brandRed relative inline-block">Actionable Insights<span class="absolute bottom-1 left-0 w-full h-1.5 bg-brandRed/25 rounded"></span></span>
+                    </h1>
+
+                    <!-- Dynamic Subtitle Badges -->
+                    <div class="text-sm sm:text-base font-medium text-navy/70 flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                        <span class="px-3 py-1 rounded-md bg-navy/5 font-bold text-navy border border-navy/10">Software Engineer</span>
+                        <span class="text-brandRed font-bold">•</span>
+                        <span class="px-3 py-1 rounded-md bg-brandRed/10 font-bold text-brandRed border border-brandRed/20">Data Analyst</span>
+                        <span class="text-brandRed font-bold">•</span>
+                        <span class="px-3 py-1 rounded-md bg-navy/5 font-bold text-navy border border-navy/10">Cyber Security</span>
+                    </div>
+
+                    <!-- Professional Summary Pitch -->
+                    <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Informatics Engineering <strong>fresh graduate</strong> from <strong>Universitas Langlangbuana</strong> with practical experience structuring databases, engineering systems, and digitizing aircraft maintenance operations at <strong>PT Dirgantara Indonesia</strong>.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <a href="#projects" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-brandRed hover:bg-brandRed-hover text-white font-bold text-center shadow-lg shadow-brandRed/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-diagram-project"></i> View My Work
+                        </a>
+                        <a href="#contact" class="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-white border-2 border-navy/20 hover:border-navy text-navy font-bold text-center transition-all hover:bg-navy hover:text-white shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-regular fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Social / Contact Quick Badges -->
+                    <div class="pt-4 flex items-center justify-center lg:justify-start space-x-6 text-navy/70">
+                        <a href="mailto:ramdanirizki260@gmail.com" class="hover:text-brandRed transition-colors text-2xl" title="Direct Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:+6289531524428" class="hover:text-brandRed transition-colors text-2xl" title="Call / WhatsApp">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener" class="hover:text-brandRed transition-colors text-2xl" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" rel="noopener" class="hover:text-brandRed transition-colors text-2xl" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Profile Image Card -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <!-- Decorative Crimson Halo -->
+                        <div class="absolute -inset-2 bg-gradient-to-r from-brandRed via-red-600 to-navy rounded-3xl blur-xl opacity-30 transform rotate-2"></div>
+                        
+                        <!-- Main Card -->
+                        <div class="relative bg-white rounded-3xl p-6 shadow-2xl border border-gray-100 space-y-5">
+                            
+                            <!-- Profile Portrait Image Container -->
+                            <div class="portrait-frame overflow-hidden group">
+                                <img src="https://ibb.co.com/cKD8B9p7" alt="Rizki Ramdani - Fresh Graduate Portrait" class="w-full h-80 object-cover object-center rounded-2xl transform group-hover:scale-105 transition-transform duration-500" onerror="this.onerror=null; this.src='IMG_20261028_185246_2.jpg';">
+                            </div>
+
+                            <!-- Name & Location Header -->
+                            <div class="flex items-center justify-between border-b border-gray-100 pb-4">
+                                <div>
+                                    <h3 class="font-extrabold text-xl text-navy">Rizki Ramdani</h3>
+                                    <p class="text-xs text-gray-500 font-semibold mt-0.5">
+                                        <i class="fa-solid fa-location-dot text-brandRed mr-1"></i> Bandung, West Java, ID
+                                    </p>
+                                </div>
+                                <span class="px-3 py-1 rounded-full bg-brandRed/10 text-brandRed font-bold text-xs">
+                                    Fresh Graduate
+                                </span>
+                            </div>
+
+                            <!-- Stats Row -->
+                            <div class="grid grid-cols-2 gap-3">
+                                <div class="p-3 rounded-xl bg-lightbg border border-gray-200/60 text-center">
+                                    <div class="text-xl font-black text-brandRed">2+</div>
+                                    <div class="text-[10px] font-extrabold text-navy/70 uppercase tracking-wider mt-0.5">Internships</div>
+                                </div>
+                                <div class="p-3 rounded-xl bg-lightbg border border-gray-200/60 text-center">
+                                    <div class="text-xl font-black text-navy">100%</div>
+                                    <div class="text-[10px] font-extrabold text-navy/70 uppercase tracking-wider mt-0.5">Servicing Compliance</div>
+                                </div>
+                            </div>
+
+                            <!-- Query Code Preview Box -->
+                            <div class="rounded-xl bg-navy-dark text-gray-200 p-3.5 font-mono text-xs space-y-1.5 shadow-inner">
+                                <div class="flex items-center justify-between text-gray-400 border-b border-gray-700 pb-1.5 mb-1.5 text-[11px]">
+                                    <span class="flex items-center gap-1.5"><span class="w-2.5 h-2.5 rounded-full bg-red-500"></span><span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span><span class="w-2.5 h-2.5 rounded-full bg-green-500"></span></span>
+                                    <span>MEDALI_query.sql</span>
+                                </div>
+                                <p class="text-emerald-400"><span class="text-blue-400">SELECT</span> aircraft_id, flight_hours</p>
+                                <p class="text-emerald-400"><span class="text-blue-400">FROM</span> aircraft_maintenance_db</p>
+                                <p class="text-emerald-400"><span class="text-blue-400">WHERE</span> service_status = <span class="text-brandRed">'DUE'</span>;</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME & EDUCATION SECTION -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-extrabold text-brandRed uppercase tracking-widest">Background & Qualifications</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-navy">About Me</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                
+                <!-- Professional Summary Card -->
+                <div class="lg:col-span-7 bg-lightbg rounded-2xl p-8 border border-gray-200/70 shadow-sm space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-navy">Professional Summary</h4>
+                    </div>
+
+                    <p class="text-gray-700 leading-relaxed text-base">
+                        Analytical and detail-oriented <strong>Informatics Engineering fresh graduate</strong> with practical experience in database design, data management, and system digitization. Successfully developed data-centric applications, including a large-scale aircraft maintenance database for <strong>PT Dirgantara Indonesia</strong>, demonstrating a strong ability to structure and process complex datasets.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed text-base">
+                        Eager to launch a career in <strong>Data Analyst</strong> or <strong>Software Developer</strong> roles to leverage technical programming, SQL, and database optimization skills to extract actionable insights and drive data-driven decision-making.
+                    </p>
+
+                    <div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-gray-200">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-database text-brandRed text-2xl"></i>
+                            <div>
+                                <h5 class="font-bold text-navy text-sm">Database Arch</h5>
+                                <p class="text-xs text-gray-500">SQL & Relational DB</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-chart-line text-brandRed text-2xl"></i>
+                            <div>
+                                <h5 class="font-bold text-navy text-sm">Data Analytics</h5>
+                                <p class="text-xs text-gray-500">Pattern & Insights</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-shield-halved text-brandRed text-2xl"></i>
+                            <div>
+                                <h5 class="font-bold text-navy text-sm">System Audit</h5>
+                                <p class="text-xs text-gray-500">Security & Integrity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education Card -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-navy text-white rounded-2xl p-8 shadow-md relative overflow-hidden">
+                        <div class="absolute -right-6 -bottom-6 w-36 h-36 bg-brandRed/20 rounded-full blur-xl pointer-events-none"></div>
+                        
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center text-lg">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h4 class="text-xl font-bold">Education</h4>
+                        </div>
+
+                        <div class="space-y-3">
+                            <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-brandRed border border-white/10">Bachelor Degree (S.T. / S.Kom)</span>
+                            <h5 class="text-xl font-extrabold text-white">Universitas Langlangbuana</h5>
+                            <p class="text-gray-300 text-sm font-medium">Bachelor of Engineering in Informatics Engineering</p>
+                            
+                            <div class="pt-3 text-xs text-gray-400 flex flex-wrap items-center gap-4 border-t border-white/10">
+                                <span><i class="fa-solid fa-graduation-cap text-brandRed mr-1"></i> Fresh Graduate</span>
+                                <span><i class="fa-solid fa-location-dot text-brandRed mr-1"></i> Bandung, Indonesia</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Core Competencies Box -->
+                    <div class="bg-white rounded-2xl p-6 border border-gray-200/80 shadow-sm space-y-4">
+                        <h4 class="font-bold text-navy text-base flex items-center gap-2">
+                            <i class="fa-solid fa-bolt text-brandRed"></i> Key Technical Strengths
+                        </h4>
+                        <ul class="space-y-2.5 text-sm text-gray-700">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs"></i>
+                                <span>Data Digitization & Complex Dataset Structuring</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs"></i>
+                                <span>Full-Stack Web Development & Backend Logic</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs"></i>
+                                <span>Automated Flight Hour Maintenance Tracking</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-emerald-500 mt-1 text-xs"></i>
+                                <span>SQL Query Optimization & Database Management</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFESSIONAL EXPERIENCE SECTION (METODE XYZ) -->
+    <section id="experience" class="py-20 bg-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-extrabold text-brandRed uppercase tracking-widest">Career Journey</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-navy">Professional Experience</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Timeline Experience Cards -->
+            <div class="space-y-8 max-w-5xl mx-auto">
+                
+                <!-- Experience 1: PT Dirgantara Indonesia -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow relative">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-100 pb-5 mb-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-brandRed/10 text-brandRed text-xs font-bold mb-2">Aviation Engineering Industry</span>
+                            <h4 class="text-xl sm:text-2xl font-bold text-navy">Full Stack Developer Intern</h4>
+                            <p class="text-sm font-semibold text-gray-600">PT Dirgantara Indonesia — Divisi Maintenance Engineering</p>
+                        </div>
+                        <div class="md:text-right">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-navy/5 text-navy font-bold text-xs border border-navy/10">
+                                <i class="fa-regular fa-calendar-alt mr-2 text-brandRed"></i> October 2025 – April 2026
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Bullet Points (XYZ Method) -->
+                    <ul class="space-y-3.5 text-gray-700 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandRed mt-2 flex-shrink-0"></span>
+                            <span><strong>Engineered MEDALI Application:</strong> Engineered the Maintenance Engineering Database Application (MEDALI) to digitize aircraft data, significantly improving the division's data accessibility and data accuracy.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandRed mt-2 flex-shrink-0"></span>
+                            <span><strong>Automated Flight Tracking:</strong> Developed an automated data tracking module to match aircraft flight hours with specific servicing requirements, ensuring 100% compliance with maintenance schedules.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-brandRed mt-2 flex-shrink-0"></span>
+                            <span><strong>Database Schema Optimization:</strong> Designed and optimized relational database schemas to efficiently store, manage, and retrieve complex aircraft specifications and maintenance records.</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">SQL / Relational DB</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Full Stack Architecture</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Data Digitization</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Aircraft Servicing Logic</span>
+                    </div>
+                </div>
+
+                <!-- Experience 2: P3MM Universitas Langlangbuana -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-100 pb-5 mb-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-navy/10 text-navy text-xs font-bold mb-2">Academic & Student Affairs</span>
+                            <h4 class="text-xl sm:text-2xl font-bold text-navy">Full Stack Developer Intern</h4>
+                            <p class="text-sm font-semibold text-gray-600">P3MM Universitas Langlangbuana</p>
+                        </div>
+                        <div class="md:text-right">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-navy/5 text-navy font-bold text-xs border border-navy/10">
+                                <i class="fa-regular fa-calendar-alt mr-2 text-brandRed"></i> March 2025 – August 2025
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Bullet Points (XYZ Method) -->
+                    <ul class="space-y-3.5 text-gray-700 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-navy mt-2 flex-shrink-0"></span>
+                            <span><strong>Centralized Achievement App:</strong> Developed a comprehensive student registration and achievement management application, centralizing academic records and streamlining administrative data entry.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-navy mt-2 flex-shrink-0"></span>
+                            <span><strong>Backend Querying & Reporting:</strong> Structured student performance databases and integrated backend architectures, enabling efficient data querying and reporting of university achievements.</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Database Management</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Data Entry Optimization</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Reporting Systems</span>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Himpunan Mahasiswa Jurusan Informatika -->
+                <div class="bg-white rounded-2xl p-6 sm:p-8 border border-gray-200/80 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-gray-100 pb-5 mb-6">
+                        <div>
+                            <span class="inline-block px-3 py-1 rounded-md bg-gray-200 text-gray-700 text-xs font-bold mb-2">Student Organization</span>
+                            <h4 class="text-xl sm:text-2xl font-bold text-navy">Secretary</h4>
+                            <p class="text-sm font-semibold text-gray-600">Informatics Student Association (HMIF) — Universitas Langlangbuana</p>
+                        </div>
+                        <div class="md:text-right">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-navy/5 text-navy font-bold text-xs border border-navy/10">
+                                <i class="fa-regular fa-calendar-alt mr-2 text-brandRed"></i> 2024 – 2025
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Bullet Points (XYZ Method) -->
+                    <ul class="space-y-3.5 text-gray-700 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-400 mt-2 flex-shrink-0"></span>
+                            <span><strong>Digital Archiving System:</strong> Managed all incoming and outgoing organizational correspondence, establishing a structured and easily searchable digital archive system.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-gray-400 mt-2 flex-shrink-0"></span>
+                            <span><strong>Activity Reporting:</strong> Compiled, processed, and published detailed activity reports for organizational events, ensuring data transparency and documentation accuracy.</span>
+                        </li>
+                    </ul>
+
+                    <div class="pt-6 mt-6 border-t border-gray-100 flex flex-wrap gap-2">
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Information Management</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Data Entry</span>
+                        <span class="px-2.5 py-1 rounded-md bg-lightbg text-navy text-xs font-semibold border border-gray-200">Technical Reporting</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PROJECTS SECTION -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-extrabold text-brandRed uppercase tracking-widest">Key Applications & Systems</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-navy">Featured Projects</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Grid Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1 Card: MEDALI -->
+                <div class="bg-lightbg rounded-2xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="p-6 bg-navy text-white relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-brandRed text-xs font-bold uppercase tracking-wider">Enterprise System</span>
+                            <i class="fa-solid fa-plane-departure text-xl text-gray-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold group-hover:text-brandRed transition-colors">MEDALI System</h4>
+                        <p class="text-xs text-gray-300 mt-1">PT Dirgantara Indonesia Maintenance DB</p>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            A centralized Maintenance Engineering Database Application built to digitize aircraft records and automatically match flight hours with servicing thresholds.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1.5 text-xs">
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">MySQL</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Full Stack</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Analytics</span>
+                            </div>
+
+                            <button onclick="openModal('medali')" class="w-full py-2.5 rounded-lg bg-navy/5 hover:bg-navy text-navy hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 border border-navy/10">
+                                <i class="fa-solid fa-circle-info"></i> View System Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 Card: P3MM Portal -->
+                <div class="bg-lightbg rounded-2xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="p-6 bg-navy text-white relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-navy-light text-xs font-bold uppercase tracking-wider">Academic Portal</span>
+                            <i class="fa-solid fa-award text-xl text-gray-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold group-hover:text-brandRed transition-colors">P3MM Achievement Portal</h4>
+                        <p class="text-xs text-gray-300 mt-1">Universitas Langlangbuana</p>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Web application streamlining student registration and academic achievement data entry with structured backend querying for administrative reporting.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1.5 text-xs">
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">PHP/SQL</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Data Entry</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Reporting</span>
+                            </div>
+
+                            <button onclick="openModal('p3mm')" class="w-full py-2.5 rounded-lg bg-navy/5 hover:bg-navy text-navy hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 border border-navy/10">
+                                <i class="fa-solid fa-circle-info"></i> View System Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 Card: Data & Security Lab -->
+                <div class="bg-lightbg rounded-2xl overflow-hidden border border-gray-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col group">
+                    <div class="p-6 bg-navy text-white relative">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="px-2.5 py-1 rounded bg-brandRed text-xs font-bold uppercase tracking-wider">Data & Cyber Security</span>
+                            <i class="fa-solid fa-chart-pie text-xl text-gray-300"></i>
+                        </div>
+                        <h4 class="text-xl font-bold group-hover:text-brandRed transition-colors">Data & Security Lab</h4>
+                        <p class="text-xs text-gray-300 mt-1">Informatics Engineering Projects</p>
+                    </div>
+
+                    <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Exploratory dataset analysis, SQL query optimization, and basic vulnerability auditing performed as part of advanced university coursework.
+                        </p>
+
+                        <div class="space-y-3">
+                            <div class="flex flex-wrap gap-1.5 text-xs">
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Python</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">SQL Queries</span>
+                                <span class="px-2 py-0.5 rounded bg-white text-navy font-semibold border border-gray-200">Cyber Sec</span>
+                            </div>
+
+                            <button onclick="openModal('cyber')" class="w-full py-2.5 rounded-lg bg-navy/5 hover:bg-navy text-navy hover:text-white font-bold text-xs transition-colors flex items-center justify-center gap-2 border border-navy/10">
+                                <i class="fa-solid fa-circle-info"></i> View Project Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="py-20 bg-lightbg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-extrabold text-brandRed uppercase tracking-widest">Capabilities & Expertise</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-navy">My Skills</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                
+                <!-- Hard Skills Card -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200/80 shadow-sm space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-navy text-white flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-navy">Hard Skills</h4>
+                            <p class="text-xs text-gray-500">Technical & Data Analysis Proficiency</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-database text-brandRed"></i> Database Management
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-server text-brandRed"></i> SQL & MySQL
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-sitemap text-brandRed"></i> Data Structuring
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-chart-column text-brandRed"></i> System Analysis & Reporting
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-brandRed"></i> Full-Stack Development
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-brands fa-python text-brandRed"></i> Basic Python
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-navy/5 border border-navy/10 text-navy font-semibold text-sm hover:bg-navy hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-file-excel text-brandRed"></i> Data Entry & MS Office
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills Card -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200/80 shadow-sm space-y-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brandRed text-white flex items-center justify-center text-lg">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-navy">Soft Skills</h4>
+                            <p class="text-xs text-gray-500">Collaborative & Analytical Traits</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2.5">
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-magnifying-glass text-brandRed"></i> Analytical Thinking
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-puzzle-piece text-brandRed"></i> Problem Solving
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-eye text-brandRed"></i> Attention to Detail
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-users text-brandRed"></i> Cross-functional Collaboration
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-brandRed"></i> Time Management
+                        </span>
+                        <span class="px-3.5 py-2 rounded-xl bg-brandRed/5 border border-brandRed/10 text-navy font-semibold text-sm hover:bg-brandRed hover:text-white transition-all cursor-default flex items-center gap-2">
+                            <i class="fa-solid fa-comments text-brandRed"></i> Clear Communication
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-20 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+                <h2 class="text-xs font-extrabold text-brandRed uppercase tracking-widest">Connect With Me</h2>
+                <h3 class="text-3xl sm:text-4xl font-extrabold text-navy">Get In Touch</h3>
+                <div class="w-16 h-1 bg-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto">
+                
+                <!-- Direct Contact Information Box -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="bg-navy text-white rounded-2xl p-8 shadow-lg space-y-6 relative overflow-hidden">
+                        <h4 class="text-2xl font-bold">Contact Information</h4>
+                        <p class="text-gray-300 text-sm leading-relaxed">
+                            Feel free to reach out for Data Analyst internships, software engineering projects, or technical inquiries.
+                        </p>
+
+                        <div class="space-y-4 pt-2">
+                            <!-- Phone -->
+                            <a href="tel:+6289531524428" class="flex items-center gap-4 text-sm hover:text-brandRed transition-colors">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brandRed flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-400">Phone / WhatsApp</div>
+                                    <div class="font-medium">+62 895 3152 4428</div>
+                                </div>
+                            </a>
+
+                            <!-- Email with Copy Trigger -->
+                            <div class="flex items-center justify-between gap-4 text-sm bg-white/5 p-3 rounded-xl border border-white/10">
+                                <a href="mailto:ramdanirizki260@gmail.com" class="flex items-center gap-3 hover:text-brandRed transition-colors overflow-hidden">
+                                    <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brandRed flex-shrink-0">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+                                    <div class="truncate">
+                                        <div class="text-xs text-gray-400">Email Address</div>
+                                        <div class="font-medium truncate">ramdanirizki260@gmail.com</div>
+                                    </div>
+                                </a>
+                                <button onclick="copyEmail()" class="px-3 py-1.5 rounded-lg bg-white/10 hover:bg-brandRed text-xs text-white transition-colors flex-shrink-0 font-semibold" title="Copy Email">
+                                    <i class="fa-regular fa-copy mr-1"></i> Copy
+                                </button>
+                            </div>
+
+                            <!-- Location -->
+                            <div class="flex items-center gap-4 text-sm">
+                                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-brandRed flex-shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-400">Location</div>
+                                    <div class="font-medium">Bandung, West Java, Indonesia</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Toast Alert Container -->
+                        <div id="toast" class="hidden p-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold text-center shadow-md">
+                            Email address copied to clipboard!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Message Form -->
+                <div class="lg:col-span-7 bg-lightbg rounded-2xl p-8 border border-gray-200/80 shadow-sm">
+                    <h4 class="text-xl font-bold text-navy mb-6">Send Me a Message</h4>
+                    
+                    <form id="contact-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="name" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Your Name</label>
+                                <input type="text" id="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed text-sm bg-white transition-all">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Your Email</label>
+                                <input type="email" id="email" required placeholder="john@example.com" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed text-sm bg-white transition-all">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="subject" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Subject</label>
+                            <input type="text" id="subject" required placeholder="Data Analyst Internship Opportunity" class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed text-sm bg-white transition-all">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold text-navy uppercase tracking-wider mb-1.5">Message</label>
+                            <textarea id="message" rows="4" required placeholder="Hello Rizki, I would like to discuss..." class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:border-brandRed focus:ring-1 focus:ring-brandRed text-sm bg-white transition-all"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl bg-brandRed hover:bg-brandRed-hover text-white font-bold text-sm transition-all shadow-md shadow-brandRed/20 flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+
+                    <!-- Feedback Alert -->
+                    <div id="form-response" class="hidden mt-4 p-4 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200 text-sm font-medium text-center">
+                        Thank you! Preparing your message and opening your email client...
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-navy text-white py-8 border-t border-navy-dark mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-sm text-gray-400">
+                © 2026 <span class="text-white font-semibold">Rizki Ramdani</span>. All rights reserved.
+            </div>
+            <div class="flex items-center space-x-6 text-xs text-gray-400">
+                <a href="#hero" class="hover:text-brandRed transition-colors">Back to Top <i class="fa-solid fa-arrow-up ml-1"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP FOR PROJECT DETAILS -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-navy/70 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-2xl relative">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-navy text-xl">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 id="modal-title" class="text-2xl font-bold text-navy">Project Details</h3>
+            <p id="modal-desc" class="text-gray-600 text-sm leading-relaxed"></p>
+
+            <div class="pt-4 border-t border-gray-100 flex justify-end">
+                <button onclick="closeModal()" class="px-5 py-2 rounded-lg bg-navy text-white text-xs font-bold hover:bg-navy-dark transition-colors">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle Logic
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Copy Email to Clipboard (ExecCommand Fallback Safe)
+        function copyEmail() {
+            const emailText = 'ramdanirizki260@gmail.com';
+            
+            const dummy = document.createElement("textarea");
+            document.body.appendChild(dummy);
+            dummy.value = emailText;
+            dummy.select();
+            document.execCommand("copy");
+            document.body.removeChild(dummy);
+
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // Contact Form Mailto Handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+
+            const mailtoUri = `mailto:ramdanirizki260@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+            
+            const responseDiv = document.getElementById('form-response');
+            responseDiv.classList.remove('hidden');
+
+            setTimeout(() => {
+                window.location.href = mailtoUri;
+            }, 800);
+        }
+
+        // Modal Logic for Project Showcase
+        const modalData = {
+            medali: {
+                title: "MEDALI - Maintenance Engineering Database Application",
+                desc: "Engineered during internship at PT Dirgantara Indonesia (Division Maintenance Engineering). MEDALI digitizes aircraft maintenance schedules, links flight hours directly with maintenance checklists, and provides real-time query access to technical specifications and servicing logs with 100% compliance matching."
+            },
+            p3mm: {
+                title: "P3MM Student Registration & Achievement Application",
+                desc: "Built for P3MM Universitas Langlangbuana. Centralizes student registration records, manages achievement database entries, and structures SQL backend queries for generating administrative performance reports."
+            },
+            cyber: {
+                title: "Data Analysis & Cyber Security Projects",
+                desc: "Includes database design labs, basic Python analytical scripts, relational schema optimization, and security audits performed during Informatics Engineering studies at Universitas Langlangbuana."
+            }
+        };
+
+        function openModal(key) {
+            const item = modalData[key];
+            if (item) {
+                document.getElementById('modal-title').innerText = item.title;
+                document.getElementById('modal-desc').innerText = item.desc;
+                document.getElementById('project-modal').classList.remove('hidden');
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
